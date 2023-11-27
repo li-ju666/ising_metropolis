@@ -8,7 +8,7 @@ from para_sim import ParaSimulator
 if __name__ == '__main__':
     N = 100
     J = 1
-    num_sweeps = int(1e4)
+    num_sweeps = int(200)
 
     T1 = 1.0
     T2 = 2.0
@@ -21,7 +21,7 @@ if __name__ == '__main__':
 
     Ts = np.concatenate([Ts1, Ts2, Ts3])
 
-    lattice = np.random.choice([-1, 1], size=(N, N))
+    lattice = np.ones((N, N), dtype=np.int8)
 
     for T_idx, T in enumerate(Ts):
         # simulator = Simulator(
